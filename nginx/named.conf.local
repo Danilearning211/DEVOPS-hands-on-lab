@@ -1,0 +1,22 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "daniel.com" {
+type master;
+file "/etc/bind/data/daniel.db";
+allow-transfer { 192.168.42.129; };
+
+
+};
+zone "asriran.ir" {
+
+type forward;
+forward only;
+forwarders { 8.8.8.8;};
+};
+ 
