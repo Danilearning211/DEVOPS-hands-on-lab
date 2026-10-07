@@ -2,9 +2,9 @@ name: my first ci
 on:
  push:
 jobs:
- test: 
+ dani: 
   runs-on: ubuntu-latest
   steps:
-   - name: say Hello
+   - name: say dani
      run: echo "Hello CI/CD"
   
