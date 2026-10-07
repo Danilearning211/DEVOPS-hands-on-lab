@@ -4,7 +4,7 @@ on:
 jobs:
  test: 
   runs-on: ubuntu-latest
- steps:
-  - name: say Hello
-    run: echo "Hello CI/CD"
+  steps:
+   - name: say Hello
+     run: echo "Hello CI/CD"
   
