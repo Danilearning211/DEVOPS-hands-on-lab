@@ -1,0 +1,10 @@
+name: my first ci 
+on:
+ push:
+jobs:
+ test: 
+  runs-on: ubuntu-latest
+ steps:
+  - name: say Hello
+    run: echo "Hello CI/CD"
+  
