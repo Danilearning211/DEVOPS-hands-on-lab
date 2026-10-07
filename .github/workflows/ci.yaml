@@ -7,4 +7,8 @@ jobs:
   steps:
    - name: say dani
      run: echo "Hello CI/CD"
-  
+   - name: show current directory
+     run: pwd
+   - name: List files
+     run: ls
+
