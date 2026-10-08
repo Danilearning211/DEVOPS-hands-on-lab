@@ -1,16 +1,14 @@
-name: my first ci 
+name: ci-job
 on:
  push:
 jobs:
- dani: 
+ test:
   runs-on: ubuntu-latest
-  steps:
-   - name: say dani
-     run: echo "Hello CI/CD"
-   - name: show current directory
-     run: pwd
-   - name: checkout
-     uses: actions/checkout@v4
-   - name: List files
-     run: ls
+  - name: print-ci
+    run: echo "hello this is test"
+ build:
+  runs-on: ubuntu-latest
+  -name: build-ci
+   run: echo "this is build "
+
 
