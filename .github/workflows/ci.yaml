@@ -9,6 +9,8 @@ jobs:
      run: echo "Hello CI/CD"
    - name: show current directory
      run: pwd
+   - name: checkout
+     uses: actions/checkout@v4
    - name: List files
      run: ls
 
