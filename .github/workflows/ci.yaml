@@ -4,11 +4,15 @@ on:
 jobs:
  test:
   runs-on: ubuntu-latest
-  - name: print-ci
-    run: echo "hello this is test"
+  steps:
+    
+   - name: print-ci
+     run: echo "hello this is test"
  build:
   runs-on: ubuntu-latest
-  -name: build-ci
-   run: echo "this is build "
+  steps:
+
+   - name: build-ci
+     run: echo "this is build "
 
 
