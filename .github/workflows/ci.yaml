@@ -7,13 +7,13 @@ jobs:
   runs-on: ubuntu-latest
   steps: 
    - name: Test
-     run: echo "test"
+     run: exit 1
    - name: Build
-     if: success()
-     run: echo "build"
-   - name: Deploy
-     if: success()
-     run: echo "deploy"
+     run: echo "build this file"
+   - name: Report Failure
+     if: failure()
+     run: echo "Test failed"
+
 
  build:
   needs: test
