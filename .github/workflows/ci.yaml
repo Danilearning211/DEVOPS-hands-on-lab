@@ -7,7 +7,7 @@ jobs:
   runs-on: ubuntu-latest
   steps: 
    - name: test failure
-     run: exit1
+     run: exit 1
    - name: Step2
      run: echo "test of failure"
  build:
