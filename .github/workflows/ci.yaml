@@ -6,10 +6,15 @@ jobs:
  test:
   runs-on: ubuntu-latest
   steps: 
-   - name: test failure
-     run: exit 1
-   - name: Step2
-     run: echo "test of failure"
+   - name: Test
+     run: echo "test"
+   - name: Build
+     if: success()
+     run: echo "build"
+   - name: Deploy
+     if: success()
+     run: echo "deploy"
+
  build:
   needs: test
   runs-on: ubuntu-latest
