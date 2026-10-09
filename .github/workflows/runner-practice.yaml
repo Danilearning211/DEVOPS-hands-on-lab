@@ -8,7 +8,7 @@ jobs:
    - name: Show file before checkout
      run: ls -la
    - name: checkout files
-     run: actions/checkout@v4
+     uses: actions/checkout@v4
    - name: Show files after checkout
      run: ls -la
    - name: find files
