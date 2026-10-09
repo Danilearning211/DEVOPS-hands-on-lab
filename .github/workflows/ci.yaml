@@ -9,6 +9,7 @@ jobs:
    - name: print-ci
      run: echo "hello this is test"
  build:
+  needs: test
   runs-on: ubuntu-latest
   steps:
 
