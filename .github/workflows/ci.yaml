@@ -1,19 +1,19 @@
-name: ci-job
+name: my ci
 on:
  push:
 jobs:
  test:
   runs-on: ubuntu-latest
-  steps:
-    
-   - name: print-ci
-     run: echo "hello this is test"
+  steps: 
+   - name: print hello
+     run: echo "hello test"
+   - name: who
+     run: whoami
+   - name: date
+     run: date
  build:
   needs: test
   runs-on: ubuntu-latest
-  steps:
-
-   - name: build-ci
-     run: echo "this is build "
-
-
+  steps: 
+   - name: print build
+     run: echo "this is build"
