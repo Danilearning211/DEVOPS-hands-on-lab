@@ -5,11 +5,12 @@ jobs:
  test:
   runs-on: ubuntu-latest
   steps:
-   - name: Show operating  system
-     run: uname -s
-   - name: Show current directory
-     run: pwd
-   - name: Show current user
-     run: whoami
-   - name: Show files
+   - name: Show file before checkout
      run: ls -la
+   - name: checkout files
+     run: actions/checkout@v4
+   - name: Show files after checkout
+     run: ls -la
+   - name: find files
+     run: find . -maxdepth 2 -type f 
+
