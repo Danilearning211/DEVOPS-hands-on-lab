@@ -5,12 +5,10 @@ jobs:
  test:
   runs-on: ubuntu-latest
   steps: 
-   - name: print hello
-     run: echo "hello test"
-   - name: who
-     run: whoami
-   - name: date
-     run: date
+   - name: create file
+     run: echo "hello test" >> message.txt
+   - name: print file 
+     run: cat message.txt
  build:
   needs: test
   runs-on: ubuntu-latest
