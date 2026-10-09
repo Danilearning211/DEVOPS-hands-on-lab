@@ -1,6 +1,6 @@
 name: runner practice
 on:
- workflow_ditatch:
+ workflow_dispatch:
 jobs:
  test:
   runs-on: ubuntu-latest
