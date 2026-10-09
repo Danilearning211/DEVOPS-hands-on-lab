@@ -1,0 +1,15 @@
+name: runner practice
+on:
+ workflow_ditatch:
+jobs:
+ test:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Show operating  system
+     run: uname -s
+   - name: Show current directory
+     run: pwd
+   - name: Show current user
+     run: whoami
+   - name: Show files
+     run: ls -la
