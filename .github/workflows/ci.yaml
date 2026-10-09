@@ -11,8 +11,8 @@ jobs:
    - name: Build
      run: echo "build this file"
    - name: Report Failure
-     if: failure()
-     run: echo "Test failed"
+     if: always()
+     run: echo "cleaning up ..."
 
 
  build:
