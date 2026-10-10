@@ -2,17 +2,17 @@ name: my ci
 on:
  push:
  workflow_dispatch:
+env:
+ App_name: Way
+
 jobs:
  test:
   runs-on: ubuntu-latest
+  env:
+   App_name: daniel
   steps: 
-   - name: Test
-     run: exit 1
    - name: Build
-     run: echo "build this file"
-   - name: Report Failure
-     if: always()
-     run: echo "cleaning up ..."
+     run: echo "build this file $App_name"
 
 
  build:
@@ -20,4 +20,5 @@ jobs:
   runs-on: ubuntu-latest
   steps: 
    - name: print build
-     run: echo "this is build"
+     run: echo "this is $App_name "
+
