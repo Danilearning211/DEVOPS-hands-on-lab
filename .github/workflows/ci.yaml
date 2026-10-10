@@ -11,7 +11,7 @@ jobs:
   steps:
    - name: Secret Check
      env:
-      My_pass: ${{ secrects.DANI_PASS }}
+      My_pass: ${{ secrets.DANI_PASS }}
      run: |
        if [ -n "$My_pass" ] ; then
         echo "Secret is available"
