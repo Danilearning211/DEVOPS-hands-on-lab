@@ -8,17 +8,15 @@ env:
 jobs:
  test:
   runs-on: ubuntu-latest
-  env:
-   App_name: daniel
-  steps: 
-   - name: Build
-     run: echo "build this file $App_name"
-
-
- build:
-  needs: test
-  runs-on: ubuntu-latest
-  steps: 
-   - name: print build
-     run: echo "this is $App_name "
+  steps:
+   - name: Secret Check
+     env:
+      My_pass: ${{ secrects.DANI_PASS }}
+     run: |
+       if [ -n "$My_pass" ] ; then
+        echo "Secret is available"
+       else
+        echo "Secret is unavailable"
+        exit 1
+       fi
 
