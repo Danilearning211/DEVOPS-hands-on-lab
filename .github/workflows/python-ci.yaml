@@ -26,5 +26,5 @@ jobs:
    - name: Test
      run: pytest -v
    - name: Build
-     run: pip -m compileall -q .
+     run: python -m compileall -q .
 
